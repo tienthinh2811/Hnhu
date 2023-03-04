@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.4.2.3 (Linux)"/>
+	<meta name="author" content="Windows User"/>
+	<meta name="created" content="2023-02-24T15:48:00"/>
+	<meta name="changedby" content="Windows User"/>
+	<meta name="changed" content="2023-02-24T15:48:00"/>
+	<meta name="AppVersion" content="16.0000"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 1in }
+		p { line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 108%; margin-bottom: 0.11in">
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0
+Transitional//EN&quot;&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">&lt;HTML&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> &lt;HEAD&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;TITLE&gt;
+New Document &lt;/TITLE&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;META
+NAME=&quot;Generator&quot; CONTENT=&quot;EditPlus&quot;&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;META
+NAME=&quot;Author&quot; CONTENT=&quot;&quot;&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;META
+NAME=&quot;Keywords&quot; CONTENT=&quot;&quot;&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;META
+NAME=&quot;Description&quot; CONTENT=&quot;&quot;&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;style&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  html, body {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  height: 100%;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  padding: 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  margin: 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  background:
+#000;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">}</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">canvas {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  position:
+absolute;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  width: 100%;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  height: 100%;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">}</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;/style&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> &lt;/HEAD&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> &lt;BODY&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;canvas
+id=&quot;pinkboard&quot;&gt;&lt;/canvas&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;script&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  /*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> * Settings</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">var settings = {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  particles: {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    length:  
+500, // maximum amount of particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    duration:  
+2, // particle duration in sec</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    velocity:
+100, // particle velocity in pixels/sec</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    effect:
+-0.75, // play with this for a nice effect</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    size:     
+30, // particle size in pixels</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  },</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">};</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">/*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> *
+RequestAnimationFrame polyfill by Erik Möller</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">(function(){var
+b=0;var c=[&quot;ms&quot;,&quot;moz&quot;,&quot;webkit&quot;,&quot;o&quot;];for(var
+a=0;a&lt;c.length&amp;&amp;!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+&quot;RequestAnimationFrame&quot;];window.cancelAnimationFrame=window[c[a]+&quot;CancelAnimationFrame&quot;]||window[c[a]+&quot;CancelRequestAnimationFrame&quot;]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var
+d=new Date().getTime();var f=Math.max(0,16-(d-b));var
+g=window.setTimeout(function(){h(d+f)},f);b=d+f;return
+g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">/*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> * Point class</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">var Point =
+(function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+Point(x, y) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.x =
+(typeof x !== 'undefined') ? x : 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.y =
+(typeof y !== 'undefined') ? y : 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Point.prototype.clone = function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    return new
+Point(this.x, this.y);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Point.prototype.length = function(length) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if (typeof
+length == 'undefined')</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      return
+Math.sqrt(this.x * this.x + this.y * this.y);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.normalize();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.x *=
+length;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.y *=
+length;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    return this;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Point.prototype.normalize = function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var length =
+this.length();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.x /=
+length;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.y /=
+length;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    return this;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  return Point;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">})();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">/*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> * Particle class</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">var Particle =
+(function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+Particle() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.position
+= new Point();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.velocity
+= new Point();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.acceleration = new Point();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.age = 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Particle.prototype.initialize = function(x, y, dx, dy) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.position.x = x;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.position.y = y;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.velocity.x = dx;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.velocity.y = dy;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.acceleration.x = dx * settings.particles.effect;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.acceleration.y = dy * settings.particles.effect;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.age = 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Particle.prototype.update = function(deltaTime) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.position.x += this.velocity.x * deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.position.y += this.velocity.y * deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.velocity.x += this.acceleration.x * deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+this.velocity.y += this.acceleration.y * deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    this.age +=
+deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+Particle.prototype.draw = function(context, image) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    function
+ease(t) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      return
+(--t) * t * t + 1;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var size =
+image.width * ease(this.age / settings.particles.duration);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.globalAlpha = 1 - this.age / settings.particles.duration;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.drawImage(image, this.position.x - size / 2, this.position.y
+- size / 2, size, size);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  return
+Particle;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">})();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">/*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> * ParticlePool
+class</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">var ParticlePool
+= (function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  var particles,</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      firstActive
+= 0,</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      firstFree  
+= 0,</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      duration   
+= settings.particles.duration;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+ParticlePool(length) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // create and
+populate particle pool</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    particles =
+new Array(length);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    for (var i =
+0; i &lt; particles.length; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">     
+particles[i] = new Particle();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+ParticlePool.prototype.add = function(x, y, dx, dy) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+particles[firstFree].initialize(x, y, dx, dy);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // handle
+circular queue</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    firstFree++;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if (firstFree
+  == particles.length) firstFree   = 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if
+(firstActive == firstFree       ) firstActive++;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if
+(firstActive == particles.length) firstActive = 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+ParticlePool.prototype.update = function(deltaTime) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var i;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // update
+active particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if
+(firstActive &lt; firstFree) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i =
+firstActive; i &lt; firstFree; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].update(deltaTime);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if (firstFree
+&lt; firstActive) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i =
+firstActive; i &lt; particles.length; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].update(deltaTime);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i = 0;
+i &lt; firstFree; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].update(deltaTime);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // remove
+inactive particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    while
+(particles[firstActive].age &gt;= duration &amp;&amp; firstActive !=
+firstFree) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">     
+firstActive++;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      if
+(firstActive == particles.length) firstActive = 0;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+ParticlePool.prototype.draw = function(context, image) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // draw
+active particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if
+(firstActive &lt; firstFree) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i =
+firstActive; i &lt; firstFree; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].draw(context, image);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    if (firstFree
+&lt; firstActive) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i =
+firstActive; i &lt; particles.length; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].draw(context, image);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      for (i = 0;
+i &lt; firstFree; i++)</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">       
+particles[i].draw(context, image);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  };</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  return
+ParticlePool;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">})();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">/*</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> * Putting it all
+together</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> */</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">(function(canvas)
+{</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  var context =
+canvas.getContext('2d'),</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      particles =
+new ParticlePool(settings.particles.length),</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">     
+particleRate = settings.particles.length /
+settings.particles.duration, // particles/sec</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      time;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  // get point on
+heart with -PI &lt;= t &lt;= PI</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+pointOnHeart(t) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    return new
+Point(</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      160 *
+Math.pow(Math.sin(t), 3),</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      130 *
+Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 *
+Math.cos(4 * t) + 25</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    );</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  // creating the
+particle image using a dummy canvas</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  var image =
+(function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var canvas  =
+document.createElement('canvas'),</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">        context =
+canvas.getContext('2d');</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    canvas.width 
+= settings.particles.size;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    canvas.height
+= settings.particles.size;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // helper
+function to create the path</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    function
+to(t) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      var point =
+pointOnHeart(t);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      point.x =
+settings.particles.size / 2 + point.x * settings.particles.size /
+350;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      point.y =
+settings.particles.size / 2 - point.y * settings.particles.size /
+350;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      return
+point;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // create the
+path</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.beginPath();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var t =
+-Math.PI;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var point =
+to(t);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.moveTo(point.x, point.y);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    while (t &lt;
+Math.PI) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      t += 0.01;
+// baby steps!</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      point =
+to(t);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">     
+context.lineTo(point.x, point.y);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.closePath();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // create the
+fill</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.fillStyle = '#ea80b0';</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.fill();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // create the
+image</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var image =
+new Image();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    image.src =
+canvas.toDataURL();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    return image;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  })();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  // render that
+thing!</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+render() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // next
+animation frame</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+requestAnimationFrame(render);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // update
+time</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var newTime  
+= new Date().getTime() / 1000,</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">        deltaTime
+= newTime - (time || newTime);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    time =
+newTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // clear
+canvas</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+context.clearRect(0, 0, canvas.width, canvas.height);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // create new
+particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    var amount =
+particleRate * deltaTime;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    for (var i =
+0; i &lt; amount; i++) {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      var pos =
+pointOnHeart(Math.PI - 2 * Math.PI * Math.random());</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">      var dir =
+pos.clone().length(settings.particles.velocity);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">     
+particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y,
+dir.x, -dir.y);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    // update and
+draw particles</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+particles.update(deltaTime);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">   
+particles.draw(context, image);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  // handle
+(re-)sizing of the canvas</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  function
+onResize() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    canvas.width 
+= canvas.clientWidth;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    canvas.height
+= canvas.clientHeight;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  window.onresize
+= onResize;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  // delay
+rendering bootstrap</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> 
+setTimeout(function() {</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    onResize();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">    render();</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  }, 10);</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">})(document.getElementById('pinkboard'));</p>
+<p style="line-height: 108%; margin-bottom: 0.11in">  &lt;/script&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"> &lt;/BODY&gt;</p>
+<p style="line-height: 108%; margin-bottom: 0.11in"><a name="_GoBack"></a>
+&lt;/HTML&gt;</p>
+</body>
+</html>
